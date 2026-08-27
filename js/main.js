@@ -60,7 +60,7 @@
   // Drag to pan, scroll to zoom, double-click to reset. The chosen
   // framing is remembered in localStorage on this browser. To ship a
   // fixed framing to every visitor, replace DEFAULT below.
-  var DEFAULT = { x: 0, y: 0, s: 1.6 };
+  var DEFAULT = { x: 14.56, y: 83.27, s: 3.97 };
   var KEY = "ga-avatar-crop";
   var box = document.getElementById("avatar");
   var img = document.getElementById("avatar-img");
