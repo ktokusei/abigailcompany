@@ -4,6 +4,14 @@
    A CSV export can later regenerate the DEALS array wholesale.
    ───────────────────────────────────────────────────────────── */
 
+// Hero banner — rotates every HERO_MS. Add or remove entries freely.
+window.HERO_MS = 5000;
+window.HERO_SLIDES = [
+  { photo: "img/hero-1.jpg", alt: "3895 Page Mill Road, Los Altos Hills" },
+  { photo: "img/hero-2.jpg", alt: "191 Garland Way, Los Altos" },
+  { photo: "img/hero-3.jpg", alt: "2 Marymont Avenue, Atherton" }
+];
+
 window.DEALS_UPDATED = "Updated August 2026";
 
 window.DEALS = [

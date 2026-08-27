@@ -8,6 +8,22 @@
     });
   };
 
+  var heroBox = document.getElementById("hero-slides");
+  if (heroBox && window.HERO_SLIDES && window.HERO_SLIDES.length) {
+    heroBox.innerHTML = window.HERO_SLIDES.map(function (s, i) {
+      return '<img class="' + (i === 0 ? "on" : "") + '" src="' + esc(s.photo) + '" alt="' + esc(s.alt || "") + '" />';
+    }).join("");
+    var frames = heroBox.querySelectorAll("img");
+    if (frames.length > 1) {
+      var at = 0;
+      setInterval(function () {
+        frames[at].classList.remove("on");
+        at = (at + 1) % frames.length;
+        frames[at].classList.add("on");
+      }, window.HERO_MS || 5000);
+    }
+  }
+
   var stamp = document.getElementById("deals-updated");
   if (stamp) stamp.textContent = window.DEALS_UPDATED || "";
 
